@@ -10,7 +10,6 @@ export function getData() {
         dispatch(getDataFailure('Amazon get data failure'));
       } else {
         dispatch(getDataSuccess(response));
-        console.log("response",response)
       }
     });
   };

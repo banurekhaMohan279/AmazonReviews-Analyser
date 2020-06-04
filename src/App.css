@@ -14,14 +14,26 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #212529;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding-left: 5vh;
+}
+
+.App-footer{
+    background-color: #212529;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: white;
 }
 
 .App-link {
@@ -37,18 +49,63 @@
   }
 }
 
-.card-img-top{
-  height:50%;
+.cardDate{
+    font-size: 0.5rem;
+    color: #7b7979;
 }
 
-.positiveCard{
-  background: #50dabf;
+#page-numbers {
+  list-style: none;
+  display: inline-block;
 }
 
-.negativeCard{
-  background:#de8a71 ;
+#page-numbers li {
+    color: #fff;
+    float: left;
+    padding: 5px 15px;
+    text-decoration: none;
+    background: #000;
+    margin: 2px;
+    border-radius: 10%;
 }
 
-.neutralCard{
-  background: #f1c40f ;
+#page-numbers li:active {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#page-numbers li:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.jumbotron{
+  background-color: #fff !important;
+}
+
+.cardHeadline{
+  font-size: 0.9rem;
+  color:#000;
+  font-weight:500;
+  display: block;
+  width: 25vh;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.card-header button:focus{
+  box-shadow:none;
+}
+
+.cardDate:hover{
+  text-decoration: none;
+}
+
+.card-header button:hover {
+    color: #353638;
+    text-decoration: underline;
 }

@@ -846,7 +846,7 @@ class getDataApi {
                   "vine": "N",
                   "verified_purchase": "Y",
                   "review_headline": "Five Stars",
-                  "review_body": "baby loved it - so attractive and very nice",
+                  "review_body": "baby loved it so attractive and very nice",
                   "review_date": "2015-08-31"
                 },
                 {
