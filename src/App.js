@@ -135,9 +135,10 @@ class App extends React.Component {
                               this.state.content.map((content,i)=>{
                                 let category=Object.keys(content)[0];
                                 let contentVal=content[category];
+                                let imgname=Object.keys(content)[0].toLowerCase();
                                 return(
                                       <Card key={i}>
-                                        <Card.Img variant="top" src={"/"+category+".png"}/>
+                                        <Card.Img variant="top" src={"/"+imgname+".png"}/>
                                         <Card.Body>
                                           <Card.Title>{category+ " Comments"}</Card.Title>
                                           {this.renderCardtext(contentVal,category)}                        
