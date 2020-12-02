@@ -23,25 +23,25 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-      let Sentiment = require('sentiment'); 
-      let sentiment = new Sentiment();    
+      let Sentiment = require('sentiment');
+      let sentiment = new Sentiment();
       this.props.dispatch(getData()).then(() => {
                   this.props.apiData.forEach((content,i)=>{
                       if(content.review_body+content.review_headline)
-                      {                        
-                          let res= sentiment.analyze(content.review_body+content.review_headline);                      
+                      {
+                          let res= sentiment.analyze(content.review_body+content.review_headline);
                           let temp,category,stateCopy;
                           stateCopy = Object.assign({}, this.state);
                           switch(true){
                               case (res.score<0 || content.star_rating==="1" || content.star_rating==="2"):
                                        category=1;temp="Negative";break;
-                              case (res.score>0 || content.star_rating==="5"):                                                                           
+                              case (res.score>0 || content.star_rating==="5"):
                                        category=0;temp="Positive";break;
                               case (res.score===0):
                                        category=2;temp="Neutral";break;
                               default:
                                  break;
-                          }                       
+                          }
                           stateCopy.content[category][temp].push({"Title":content.product_title,"review_body":content.review_body
                           ,"review_headline":content.review_headline,"Date":content.review_date,"Sentiment_Score":res.score})
                           this.setState(stateCopy);
@@ -71,11 +71,11 @@ class App extends React.Component {
     let indexOfLastItem;
     if(category=="Positive") { indexOfLastItem = this.state.PoisitivePage * 3;}
     else if(category=="Negative"){ indexOfLastItem = this.state.NegativePage * 3;}
-    else if(category=="Neutral"){ indexOfLastItem = this.state.NeutralPage * 3;} 
+    else if(category=="Neutral"){ indexOfLastItem = this.state.NeutralPage * 3;}
     const indexOfFirstItem = indexOfLastItem - 3;
     const currentItems = contentVal.slice(indexOfFirstItem, indexOfLastItem);
     return currentItems.map((content,i)=>{
-             return( 
+             return(
               <Accordion defaultActiveKey="0" key={i}>
                 <Card>
                   <Card.Header>
@@ -89,8 +89,8 @@ class App extends React.Component {
                   </Accordion.Collapse>
                 </Card>
               </Accordion>
-          )      
-      });         
+          )
+      });
   }
 
   renderPagenumbers(contentVal,category){
@@ -120,11 +120,11 @@ class App extends React.Component {
             <section className="jumbotron text-center">
                 <div className="container">
                     <h1 className="jumbotron-heading">Sentiment Analysis for Amazon Customer reviews</h1>
-                    <p className="lead text-muted">A CI/CD workflow enabled React-bootstrap app which analyses the sentiment of amazon customer reviews is 
-                    delployed in AWS Amplify development platform. Customer reviews dataset found 
+                    <p className="lead text-muted">A CI/CD workflow enabled React-bootstrap app which analyses the sentiment of amazon customer reviews is
+                    delployed in AWS Amplify development platform. Customer reviews dataset found
                     <a href="https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv" target="_blank"> here. </a>
-                     Github Link 
-                    <a href="https://github.com/banurekhaMohan279/awsreactapp" target="_blank"> here.</a>                
+                     Github Link
+                    <a href="https://github.com/banurekhaMohan279/awsreactapp" target="_blank"> here.</a>
                     </p>
                 </div>
             </section>
@@ -138,10 +138,10 @@ class App extends React.Component {
                                 let imgname=Object.keys(content)[0].toLowerCase();
                                 return(
                                       <Card key={i}>
-                                        <Card.Img variant="top" src={"/"+imgname+".png"}/>
+                                        <Card.Img variant="top" src={"/img/"+imgname+".png"}/>
                                         <Card.Body>
                                           <Card.Title>{category+ " Comments"}</Card.Title>
-                                          {this.renderCardtext(contentVal,category)}                        
+                                          {this.renderCardtext(contentVal,category)}
                                         </Card.Body>
                                         <ul id="page-numbers">
                                            {this.renderPagenumbers(contentVal,category)}
@@ -149,11 +149,11 @@ class App extends React.Component {
                                     </Card>
                                 )
                               })
-                            }   
+                            }
                             </CardDeck>
                     </div>
               </div>
-              <footer className="App-footer"> 
+              <footer className="App-footer">
                 @Copyrights Reserved 2020. Contact banurekha279@gmail.com for queries.
               </footer>
         </div>
