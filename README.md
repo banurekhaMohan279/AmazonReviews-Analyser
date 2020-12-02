@@ -1,6 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AWS-React App
 
-Demo [Here](https://master.dk28t5is03ldh.amplifyapp.com)
+### Demo [Here](https://banurekhamohan279.github.io/awsreactapp/) and [Here](https://master.dk28t5is03ldh.amplifyapp.com)
+
+### Tech stack
+- React
+- HTML
+- CSS
 
 ## Available Scripts
 
