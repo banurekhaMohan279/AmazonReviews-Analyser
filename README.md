@@ -7,7 +7,7 @@
 ### Tech stack
 - React
 - HTML
-- CSS
+- Bootstrap
 
 ## Available Scripts
 
