@@ -2,6 +2,8 @@
 
 ### Demo [Here](https://banurekhamohan279.github.io/awsreactapp/) and [Here](https://master.dk28t5is03ldh.amplifyapp.com)
 
+### ![App at Work](https://github.com/banurekhaMohan279/awsreactapp/blob/master/public/img/workingModel.gif)
+
 ### Tech stack
 - React
 - HTML
