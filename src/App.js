@@ -137,7 +137,7 @@ class App extends React.Component {
                                 let contentVal=content[category];
                                 let imgname=Object.keys(content)[0].toLowerCase();
                                 return(
-                                      <Card key={i}>
+                                      <Card key={i} style={{ 'min-width': '18rem' }}>
                                         <Card.Img variant="top" src={"./img/"+imgname+".png"}/>
                                         <Card.Body>
                                           <Card.Title>{category+ " Comments"}</Card.Title>
