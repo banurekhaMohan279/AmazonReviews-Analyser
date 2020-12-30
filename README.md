@@ -5,8 +5,8 @@
 ### ![App at Work](https://github.com/banurekhaMohan279/awsreactapp/blob/master/public/img/workingModel.gif)
 
 ### Tech stack
-- React
-- HTML
+- React Js
+- HTML5
 - Bootstrap
 
 ## Available Scripts
