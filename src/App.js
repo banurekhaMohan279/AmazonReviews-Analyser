@@ -77,7 +77,7 @@ class App extends React.Component {
     return currentItems.map((content,i)=>{
              return(
               <Accordion defaultActiveKey="0" key={i}>
-                <Card>
+                <Card >
                   <Card.Header>
                       <Accordion.Toggle as={Button} variant="link" eventKey={i}>
                        <Card.Text className="cardHeadline" >{content.review_headline}</Card.Text>
@@ -121,7 +121,7 @@ class App extends React.Component {
                 <div className="container">
                     <h1 className="jumbotron-heading">Sentiment Analysis for Amazon Customer reviews</h1>
                     <p className="lead text-muted">A CI/CD workflow enabled React-bootstrap app which analyses the sentiment of amazon customer reviews is
-                    delployed in AWS Amplify development platform. Customer reviews dataset found
+                    deployed in AWS Amplify development platform. Customer reviews dataset found
                     <a href="https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv" target="_blank"> here. </a>
                      Github Link
                     <a href="https://github.com/banurekhaMohan279/awsreactapp" target="_blank"> here.</a>
