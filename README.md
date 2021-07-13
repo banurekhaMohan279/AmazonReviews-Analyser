@@ -46,7 +46,7 @@
 [New link](https://banurekhamohan279.github.io/AmazonReviews-Analyser/)
 [Old Link](https://master.dk28t5is03ldh.amplifyapp.com)
 
-This project does sentiment analysis with static amazon product reviews and is hosted on AWS Amplify
+This project does sentiment analysis with static [amazon product reviews data set](https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv) and is hosted on AWS Amplify
 
 Feel free to fork it to showcase your work!
 
@@ -58,6 +58,7 @@ Feel free to fork it to showcase your work!
 - React Bootstrap
 - Redux (Though no routes are added)
 - AWS Amplify
+- [Amazon review dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv)
 
 ## Getting Started
 
