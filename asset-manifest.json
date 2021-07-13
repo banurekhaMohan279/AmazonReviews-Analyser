@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/awsreactapp/static/css/main.b01c7198.chunk.css",
-    "main.js": "/awsreactapp/static/js/main.1260d6ce.chunk.js",
-    "main.js.map": "/awsreactapp/static/js/main.1260d6ce.chunk.js.map",
-    "runtime-main.js": "/awsreactapp/static/js/runtime-main.64e651ef.js",
-    "runtime-main.js.map": "/awsreactapp/static/js/runtime-main.64e651ef.js.map",
-    "static/css/2.f3495309.chunk.css": "/awsreactapp/static/css/2.f3495309.chunk.css",
-    "static/js/2.f7e9bc29.chunk.js": "/awsreactapp/static/js/2.f7e9bc29.chunk.js",
-    "static/js/2.f7e9bc29.chunk.js.map": "/awsreactapp/static/js/2.f7e9bc29.chunk.js.map",
-    "index.html": "/awsreactapp/index.html",
-    "static/css/2.f3495309.chunk.css.map": "/awsreactapp/static/css/2.f3495309.chunk.css.map",
-    "static/css/main.b01c7198.chunk.css.map": "/awsreactapp/static/css/main.b01c7198.chunk.css.map",
-    "static/js/2.f7e9bc29.chunk.js.LICENSE.txt": "/awsreactapp/static/js/2.f7e9bc29.chunk.js.LICENSE.txt"
+    "main.css": "/AmazonReviews-Analyser/static/css/main.b01c7198.chunk.css",
+    "main.js": "/AmazonReviews-Analyser/static/js/main.2ed573f3.chunk.js",
+    "main.js.map": "/AmazonReviews-Analyser/static/js/main.2ed573f3.chunk.js.map",
+    "runtime-main.js": "/AmazonReviews-Analyser/static/js/runtime-main.799baec5.js",
+    "runtime-main.js.map": "/AmazonReviews-Analyser/static/js/runtime-main.799baec5.js.map",
+    "static/css/2.f3495309.chunk.css": "/AmazonReviews-Analyser/static/css/2.f3495309.chunk.css",
+    "static/js/2.0c2e139f.chunk.js": "/AmazonReviews-Analyser/static/js/2.0c2e139f.chunk.js",
+    "static/js/2.0c2e139f.chunk.js.map": "/AmazonReviews-Analyser/static/js/2.0c2e139f.chunk.js.map",
+    "index.html": "/AmazonReviews-Analyser/index.html",
+    "static/css/2.f3495309.chunk.css.map": "/AmazonReviews-Analyser/static/css/2.f3495309.chunk.css.map",
+    "static/css/main.b01c7198.chunk.css.map": "/AmazonReviews-Analyser/static/css/main.b01c7198.chunk.css.map",
+    "static/js/2.0c2e139f.chunk.js.LICENSE.txt": "/AmazonReviews-Analyser/static/js/2.0c2e139f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.64e651ef.js",
+    "static/js/runtime-main.799baec5.js",
     "static/css/2.f3495309.chunk.css",
-    "static/js/2.f7e9bc29.chunk.js",
+    "static/js/2.0c2e139f.chunk.js",
     "static/css/main.b01c7198.chunk.css",
-    "static/js/main.1260d6ce.chunk.js"
+    "static/js/main.2ed573f3.chunk.js"
   ]
 }
