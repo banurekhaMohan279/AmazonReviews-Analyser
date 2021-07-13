@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AmazonReviews-Analyser/static/css/main.b01c7198.chunk.css",
-    "main.js": "/AmazonReviews-Analyser/static/js/main.2ed573f3.chunk.js",
-    "main.js.map": "/AmazonReviews-Analyser/static/js/main.2ed573f3.chunk.js.map",
+    "main.js": "/AmazonReviews-Analyser/static/js/main.45de10f6.chunk.js",
+    "main.js.map": "/AmazonReviews-Analyser/static/js/main.45de10f6.chunk.js.map",
     "runtime-main.js": "/AmazonReviews-Analyser/static/js/runtime-main.799baec5.js",
     "runtime-main.js.map": "/AmazonReviews-Analyser/static/js/runtime-main.799baec5.js.map",
     "static/css/2.f3495309.chunk.css": "/AmazonReviews-Analyser/static/css/2.f3495309.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.f3495309.chunk.css",
     "static/js/2.0c2e139f.chunk.js",
     "static/css/main.b01c7198.chunk.css",
-    "static/js/main.2ed573f3.chunk.js"
+    "static/js/main.45de10f6.chunk.js"
   ]
 }
