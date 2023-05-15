@@ -18,9 +18,7 @@ function App() {
   const [NeutralPage, setNeutralPage] = useState(1);
   const apiData = useSelector((state) => state.getDataReducer.apiData);
   const dispatch = useDispatch();
-  console.log("apiData111", apiData);
   useEffect(() => {
-
     dispatch(getData());
 
     /* Data format
@@ -30,19 +28,18 @@ function App() {
         {"Neutral":[{product_title:"",review_body:"",score:null,category:""},{product_title:"",review_body:"",score:null,category:""}]}
       ]
       */
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     let Sentiment = require("sentiment");
     let sentiment = new Sentiment();
-    console.log("apiData", apiData);
+    let stateCopy = [...contentVal];
     apiData.forEach((content, i) => {
       if (content.review_body + content.review_headline) {
         let res = sentiment.analyze(
           content.review_body + content.review_headline
         );
-        let temp, category, stateCopy;
-        stateCopy = Object.assign({}, contentVal);
+        let temp, category;
         switch (true) {
           case res.score < 0 ||
             content.star_rating === "1" ||
@@ -61,7 +58,6 @@ function App() {
           default:
             break;
         }
-        console.log("stateCopy", stateCopy, category, temp);
         stateCopy[category][temp].push({
           Title: content.product_title,
           review_body: content.review_body,
@@ -69,9 +65,9 @@ function App() {
           Date: content.review_date,
           Sentiment_Score: res.score,
         });
-        setContent((prev) => [...prev, stateCopy]);
       }
     });
+    setContent(stateCopy);
   }, [apiData]);
 
   function handleClick(event) {
@@ -85,7 +81,7 @@ function App() {
     }
   }
 
-  function renderCardtext(contentVal, category) {
+  function renderCardtext(contentInner, category) {
     // Logic for displaying current Items
     let indexOfLastItem;
     if (category === "Positive") {
@@ -96,9 +92,7 @@ function App() {
       indexOfLastItem = NeutralPage * 3;
     }
     const indexOfFirstItem = indexOfLastItem - 3;
-    console.log('contentVal', contentVal);
-    const currentItems = Array.isArray(contentVal) ? contentVal.slice(indexOfFirstItem, indexOfLastItem) : contentVal;
-    console.log("currentItems", currentItems);
+    const currentItems = contentInner.slice(indexOfFirstItem, indexOfLastItem);
     return Array.isArray(currentItems) && currentItems.map((content, i) => {
       return (
         <Accordion defaultActiveKey="0" key={i}>
@@ -123,10 +117,10 @@ function App() {
     });
   }
 
-  function renderPagenumbers(contentVal, category) {
+  function renderPagenumbers(contentInner, category) {
     // Logic for displaying page numbers
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(contentVal.length / 3); i++) {
+    for (let i = 1; i <= Math.ceil(contentInner.length / 3); i++) {
       pageNumbers.push(i);
     }
 
@@ -171,9 +165,9 @@ function App() {
       <div className="album py-5 bg-light">
         <div className="container">
           <CardDeck>
-            {contentVal.map((content, i) => {
-              console.log("contentcontentcontentcontent", content);
+            {Array.isArray(contentVal) && contentVal.map((content, i) => {
               let category = Object.keys(content)[0];
+              
               let contentInner = content[category];
               let imgname = Object.keys(content)[0].toLowerCase();
               return (
