@@ -93,28 +93,31 @@ function App() {
     }
     const indexOfFirstItem = indexOfLastItem - 3;
     const currentItems = contentInner.slice(indexOfFirstItem, indexOfLastItem);
-    return Array.isArray(currentItems) && currentItems.map((content, i) => {
-      return (
-        <Accordion defaultActiveKey="0" key={i}>
-          <Card>
-            <Card.Header>
-              <Accordion.Toggle as={Button} variant="link" eventKey={i}>
-                <Card.Text className="cardHeadline">
-                  {content.review_headline}
-                </Card.Text>
-                <Card.Text className="cardDate">
-                  {" "}
-                  {content.Date + "  "}
-                </Card.Text>
-              </Accordion.Toggle>
-            </Card.Header>
-            <Accordion.Collapse eventKey={i}>
-              <Card.Body>{content.review_body}</Card.Body>
-            </Accordion.Collapse>
-          </Card>
-        </Accordion>
-      );
-    });
+    return (
+      Array.isArray(currentItems) &&
+      currentItems.map((content, i) => {
+        return (
+          <Accordion defaultActiveKey="0" key={i}>
+            <Card>
+              <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey={i}>
+                  <Card.Text className="cardHeadline">
+                    {content.review_headline}
+                  </Card.Text>
+                  <Card.Text className="cardDate">
+                    {" "}
+                    {content.Date + "  "}
+                  </Card.Text>
+                </Accordion.Toggle>
+              </Card.Header>
+              <Accordion.Collapse eventKey={i}>
+                <Card.Body>{content.review_body}</Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
+        );
+      })
+    );
   }
 
   function renderPagenumbers(contentInner, category) {
@@ -146,7 +149,9 @@ function App() {
             development platform. Customer reviews dataset found
             <a
               href="https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv"
-              target="_blank" without rel="noreferrer"
+              target="_blank"
+              without
+              rel="noreferrer"
             >
               {" "}
               here.{" "}
@@ -154,7 +159,9 @@ function App() {
             Github Link
             <a
               href="https://github.com/banurekhaMohan279/AmazonReviews-Analyser"
-              target="_blank" without rel="noreferrer"
+              target="_blank"
+              without
+              rel="noreferrer"
             >
               {" "}
               here.
@@ -165,27 +172,28 @@ function App() {
       <div className="album py-5 bg-light">
         <div className="container">
           <CardDeck>
-            {Array.isArray(contentVal) && contentVal.map((content, i) => {
-              let category = Object.keys(content)[0];
-              
-              let contentInner = content[category];
-              let imgname = Object.keys(content)[0].toLowerCase();
-              return (
-                <Card key={i} style={{ minWidth: "18rem" }}>
-                  <Card.Img
-                    variant="top"
-                    src={"/AmazonReviews-Analyser/img/" + imgname + ".png"}
-                  />
-                  <Card.Body>
-                    <Card.Title>{category + " Comments"}</Card.Title>
-                    {renderCardtext(contentInner, category)}
-                  </Card.Body>
-                  <ul id="page-numbers">
-                    {renderPagenumbers(contentInner, category)}
-                  </ul>
-                </Card>
-              );
-            })}
+            {Array.isArray(contentVal) &&
+              contentVal.map((content, i) => {
+                let category = Object.keys(content)[0];
+
+                let contentInner = content[category];
+                let imgname = Object.keys(content)[0].toLowerCase();
+                return (
+                  <Card key={i} style={{ minWidth: "18rem" }}>
+                    <Card.Img
+                      variant="top"
+                      src={"/AmazonReviews-Analyser/img/" + imgname + ".png"}
+                    />
+                    <Card.Body>
+                      <Card.Title>{category + " Comments"}</Card.Title>
+                      {renderCardtext(contentInner, category)}
+                    </Card.Body>
+                    <ul id="page-numbers">
+                      {renderPagenumbers(contentInner, category)}
+                    </ul>
+                  </Card>
+                );
+              })}
           </CardDeck>
         </div>
       </div>
