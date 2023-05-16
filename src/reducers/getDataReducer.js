@@ -9,6 +9,7 @@ const initialState = {
 };
 
 function getDataReducer(state = initialState, action) {
+  console.log("action",action)
   switch(action.type) {
     case types.GET_DATA:
       return assign({}, state, {
@@ -33,6 +34,7 @@ function getDataReducer(state = initialState, action) {
     default:
       return state;
   }
+ // console.log("state",state)
 }
 
 export default getDataReducer;
